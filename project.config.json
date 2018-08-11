@@ -1,0 +1,15 @@
+{
+	"description": "SFMeal小程序",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx7626264fb23f60a5",
+	"projectname": "miniprogram",
+	"miniprogramRoot": "./dist",
+	"condition": {}
+}

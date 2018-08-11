@@ -1,0 +1,55 @@
+<style lang="less">
+</style>
+<template>
+  <view>
+    购物车
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Panel from '@/components/panel' // alias example
+  import Toast from 'wepy-com-toast'
+
+  export default class Cart extends wepy.component {
+    config = {
+      navigationBarTitleText: 'test'
+    }
+    components = {
+      panel: Panel,
+      toast: Toast
+    }
+
+    data = {
+    }
+
+    computed = {
+      now () {
+        return +new Date()
+      }
+    }
+
+    methods = {
+      toast () {
+        let promise = this.$invoke('toast', 'show', {
+          title: '自定义标题',
+          img: 'https://raw.githubusercontent.com/kiinlam/wetoast/master/images/star.png'
+        })
+
+        promise.then((d) => {
+          console.log('toast done')
+        })
+      }
+    }
+
+    events = {
+      'index-emit': (...args) => {
+        let $event = args[args.length - 1]
+        console.log(`${this.$name} receive ${$event.name} from ${$event.source.$name}`)
+      }
+    }
+
+    onLoad() {
+    }
+  }
+</script>
