@@ -3,7 +3,7 @@ SFMeal Miniprogram
 
 # Get Started
 
-1. The Build
+## The Build
 
 Clone the project
 
@@ -28,7 +28,7 @@ npm install
 wepy build --watch
 ```
 
-2. Run your first miniprogram
+## Run your first miniprogram
 
 下载微信开发工具: [Link To Download](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 
