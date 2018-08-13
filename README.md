@@ -3,6 +3,8 @@ SFMeal Miniprogram
 
 # Get Started
 
+1. The Build
+
 Clone the project
 
 Download Minipragram IDE  [Link to download](https://www.egret.com/products/wing.html)
@@ -21,12 +23,18 @@ cd myproject
 ```
 npm install
 ```
-开启Wepy观察模式（自动构建）
+构建小程序dist并进入观察模式（自动构筑）
 ```
 wepy build --watch
 ```
 
+2. Run your first miniprogram
 
-微信开发工具: https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
-小程序代码编辑器: https://www.egret.com/products/wing.html
+下载微信开发工具: [Link To Download](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+
+进入小程序Build目录
+```
+cd myproject/dist
+```
+
 小程序开发文档：https://developers.weixin.qq.com/miniprogram/dev/
