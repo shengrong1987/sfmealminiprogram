@@ -38,3 +38,7 @@ cd myproject/dist
 ```
 
 小程序开发文档：https://developers.weixin.qq.com/miniprogram/dev/
+
+## CSS样式表
+
+[CSS Ref](http://basscss.com/)
