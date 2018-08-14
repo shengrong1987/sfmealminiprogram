@@ -1,0 +1,44 @@
+<style lang="less">
+  .tag{
+    width : 71pt;
+  }
+</style>
+<template>
+  <view>
+    <repeat for="{{tags}}" index="index" key="key" item="tag">
+      <button class='p1 tag h5' data-index="{{index}}" @tap="tagHandler">{{tag}}</button>
+    </repeat>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  import global from '../common/global'
+
+  export default class TagPicker extends wepy.component {
+    props = {
+    }
+    data = {
+      tags: Array,
+      currentTag: Number
+    }
+    events = {
+    }
+    watch = {
+    }
+    methods = {
+      tagHandler (event) {
+        this.currentTag = event.currentTarget.dataset.index
+        this.$emit('tagChange', this.currentTag)
+      }
+    }
+    onLoad () {
+      this.currentTag = 0
+      this.$apply()
+    }
+
+    onMealReady () {
+      this.tags = global.getTags()
+      this.$apply()
+    }
+  }
+</script>

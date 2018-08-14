@@ -1,0 +1,31 @@
+<style lang="less">
+</style>
+<template>
+  <view class='flex'>
+    <text class='mr-auto'>Total: ${{total}}</text>
+    <button class='btn red' @tap='checkout'>Done Selection</button>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+
+  export default class CheckoutBar extends wepy.component {
+    props = {
+    }
+    data = {
+      total: Number
+    }
+    events = {
+    }
+    watch = {
+    }
+    methods = {
+      checkout (event) {
+      }
+    }
+    onLoad () {
+      this.total = 10
+      this.$apply()
+    }
+  }
+</script>

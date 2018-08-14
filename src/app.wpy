@@ -1,4 +1,4 @@
-<style lang="less">
+<style src='style/ace.css'>
 .container {
   height: 100%;
   display: flex;

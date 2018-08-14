@@ -1,0 +1,83 @@
+<style lang="less">
+  .dishImg{
+    width : 64px;
+    height : 64px;
+  }
+</style>
+<template>
+  <view>
+    <repeat for="{{meals}}" key="key" index="index" item="meal">
+      <repeat for="{{meal.dishes}}" key="index" index="index" item="dish">
+          <view class='flex'>
+            <view>
+              <image class='dishImg' src="{{dish.photo}}"/>
+            </view>
+            <view class='col-12'>
+              <view class='block'>
+                <text class='h5'>{{dish.title}}</text>
+              </view>
+              <view class='flex'>
+                <text class='h5 mr-auto'>{{dish.price}}</text>
+                <button class='btn' @tap='addDish'>+</button>
+                <text class='h5'>1</text>
+                <button class='btn' @tap='removeDish'>-</button>
+              </view>
+            </view>
+          </view>
+        </repeat>
+    </repeat>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  import global from '../common/global'
+  import api from '../common/api'
+
+  export default class DishPicker extends wepy.component {
+    props = {
+    }
+    data = {
+      meals: Array
+    }
+    events = {
+    }
+    watch = {
+    }
+    methods = {
+      add (event) {
+        let dishId = event.currentTarget.dataset.dishId
+        this.$emit('addDish', dishId)
+      },
+      remove (event) {
+        let dishId = event.currentTarget.dataset.dishId
+        this.$emit('removeDish', dishId)
+      }
+    }
+    format (arr) {
+      return arr
+    }
+    onLoad () {
+      this.loadMeal()
+    }
+    async loadMeal () {
+      let meals
+      let mealObj = {}
+      meals = await api.getMeals()
+
+      meals.forEach((v) => {
+        mealObj[v.id] = v
+      })
+
+      global.setMeal(mealObj)
+      global.setTags()
+      global.setDates()
+
+      this.$invoke('../datePicker', 'onMealReady')
+      this.$invoke('../tagPicker', 'onMealReady')
+
+      this.meals = this.format(meals)
+      console.log('meals: ' + meals, 'total: ' + this.total)
+      this.$apply()
+    }
+  }
+</script>

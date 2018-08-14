@@ -15,19 +15,18 @@
   @format : 格式化数据
   @loadMeal : 读取Meal数据
 */
-<style lang="less">
+<style>
 </style>
 <template>
-  <view>
-    {{title}}
-    <repeat for="{{meals}}" key="key" index="index" item="meal">
-      <view>{{meal.title}}</view>
-      <repeat for="{{meal.dishes}}" key="index" index="index" item="dish">
-        <image src="{{dish.photo}}"></image>
-        <text>{{dish.title}}</text>
-      </repeat>
-    </repeat>
-    <view class="total">{{total}}位联系人</view>
+  <view class='h100'>
+    <datePicker />
+    <view class='flex h90'>
+      <tagPicker />
+      <dishPicker class='dishPicker col-12 overflow-scroll h100'/>
+    </view>
+    <view class='fixed col-12'>
+      <checkoutBar />
+    </view>
   </view>
 </template>
 
@@ -37,14 +36,19 @@
   import Toast from 'wepy-com-toast'
   import api from '../common/api'
   import global from '../common/global'
+  import DatePicker from '../components/datePicker'
+  import TagPicker from '../components/tagPicker'
+  import DishPicker from '../components/dishPicker'
+  import CheckoutBar from '../components/checkoutBar'
 
   export default class Menu extends wepy.component {
-    config = {
-      navigationBarTitleText: 'test'
-    }
     components = {
       panel: Panel,
-      toast: Toast
+      toast: Toast,
+      datePicker: DatePicker,
+      tagPicker: TagPicker,
+      dishPicker: DishPicker,
+      checkoutBar: CheckoutBar
     }
 
     props = {
@@ -52,8 +56,6 @@
     }
 
     data = {
-      total : 0,
-      meals : []
     }
 
     computed = {
@@ -88,28 +90,6 @@
 
     onLoad() {
       console.log('onLoad...' + this.title)
-      this.loadMeal()
-    }
-
-    format (arr) {
-      return arr
-    }
-
-    async loadMeal () {
-      let meals
-      let mealObj = {}
-      meals = await api.getMeals()
-
-      meals.forEach((v) => {
-        mealObj[v.id] = v
-      })
-
-      global.setMeal(mealObj)
-
-      this.meals = this.format(meals)
-      this.total = meals.length
-      console.log("meals: " + meals, "total: " + this.total)
-      this.$apply()
     }
   }
 </script>

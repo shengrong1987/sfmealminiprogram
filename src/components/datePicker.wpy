@@ -1,0 +1,54 @@
+<style lang="less">
+  .active{
+    text-decoration:underline;
+  }
+</style>
+<template>
+  <view>
+    <repeat for="{{dates}}" key="key" index="index" item="date">
+      <title class="h6 dateitem{{currentDate==index?' active':''}}" data-index="{{index}}" @tap="dateHandler">{{date.title}} {{date.when}}</title>
+    </repeat>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  import global from '../common/global'
+  import moment from 'moment'
+
+  export default class DatePicker extends wepy.component {
+    props = {
+    }
+    data = {
+      dates: Array,
+      currentDate: Number
+    }
+    events = {
+    }
+    watch = {
+    }
+    methods = {
+      dateHandler (event) {
+        this.currentDate = event.currentTarget.dataset.index
+        this.$emit('dateChange', this.currentDate)
+      }
+    }
+    format (arr) {
+      arr = arr.sort((d1, d2) => {
+        return moment(d2).isBefore(moment(d1))
+      })
+      return arr.map((d) => {
+        let m = moment(d)
+        return { title: m.format('MM-DD'), when: m.toNow() }
+      })
+    }
+    onLoad () {
+      this.currentDate = 0
+      this.$apply()
+    }
+    onMealReady () {
+      let dates = global.getDates()
+      this.dates = this.format(dates)
+      this.$apply()
+    }
+  }
+</script>

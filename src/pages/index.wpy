@@ -17,10 +17,10 @@
 
   .tab_item {
     height: 100%;
-}
+  }
 </style>
 <template>
-  <view class="body">
+  <view class="body h100">
     <view class="tab_item tab_message" hidden="{{currentTab != 0}}">
     </view>
     <view class="tab_item tab_menu" hidden="{{currentTab != 1}}">
