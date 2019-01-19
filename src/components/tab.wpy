@@ -16,7 +16,7 @@
                 color: $activecolor;
             }
             display: inline-block;
-            width: 25%;
+            width: 33%;
             text-align: center;
         }
         .icon {
@@ -39,15 +39,11 @@
         </view>
         <view class="tab_item tab_contact{{active == 1 ? ' active' : ''}}" @tap="change(1)">
             <image class="icon" src="../images/contact{{active == 1 ? '_active' : ''}}.png"></image>
-            <text class="title">菜单</text>
+            <text class="title">发现</text>
         </view>
-        <view class="tab_item tab_discovery{{active == 2 ? ' active' : ''}}" @tap="change(2)">
-            <image class="icon" src="../images/discovery{{active == 2 ? '_active' : ''}}.png"></image>
-            <text class="title">购物车</text>
-        </view>
-        <view class="tab_item tab_me{{active == 3 ? ' active' : ''}}" @tap="change(3)">
-            <image class="icon" src="../images/me{{active == 3 ? '_active' : ''}}.png"></image>
-            <text class="title">我</text>
+        <view class="tab_item tab_me{{active == 2 ? ' active' : ''}}" @tap="change(2)">
+            <image class="icon" src="../images/me{{active == 2 ? '_active' : ''}}.png"></image>
+            <text class="title">我的</text>
         </view>
     </view>
 </template>
