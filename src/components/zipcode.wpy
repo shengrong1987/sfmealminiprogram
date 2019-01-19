@@ -1,0 +1,15 @@
+@import "../style/weui.wxss";
+<style lang="less">
+</style>
+<template>
+  <view style="text-align: center; font-size: 14px;"> <text>输入邮编查看菜单：</text></view>
+  <input type="number" style="margin: 48rpx; border-bottom: 1px solid gray; font-size: 18px; text-align: center; " placeholder=" " />
+  <button class="weui-btn" type="primary" style="margin: 48rpx;">确认</button>
+
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Zipcode extends wepy.component {
+  }
+</script>

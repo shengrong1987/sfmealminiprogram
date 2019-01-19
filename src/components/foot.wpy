@@ -1,0 +1,11 @@
+<style lang="less">
+</style>
+<template>
+  <view style="text-align: center; color: #888888; font-size: 12px;">©2019 SFMeal.com</view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Foot extends wepy.component {
+  }
+</script>

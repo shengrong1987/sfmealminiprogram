@@ -1,0 +1,21 @@
+<style lang="less">
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<template>
+  <view class="container" style="padding-top: 90rpx;">
+    <image src="../images/sfMealLogo@2x.png" style="width: 204rpx; height: 204rpx; " />
+    <text style="font-size: 20px; padding-top:40rpx;">SFMeal.com</text>
+    <text style="font-size: 14px; color: #888888; padding-top:32rpx;">北美私房菜分享平台</text>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Logo extends wepy.component {
+  }
+</script>
