@@ -1,0 +1,31 @@
+@import "../style/weui.wxss";
+
+<style lang="less">
+</style>
+
+<template>
+<dishcard />
+  <dishcard />
+  <dishcard />
+  <navigator url="menu" hover-class="navigator-hover">
+        <dishcard />
+      </navigator>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Dishcard from './dishcard'
+
+export default class Dishlist extends wepy.component {
+  components = {
+    dishcard: Dishcard
+  };
+  methods = {
+    ontap: function () {
+      wepy.navigateTo({
+        url: 'index'
+      })
+    }
+  };
+}
+</script>
