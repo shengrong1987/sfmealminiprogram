@@ -1,0 +1,25 @@
+@import "../style/weui.wxss";
+
+<style lang="less">
+</style>
+
+<template>
+  <meallist />
+  <tab :active.sync="currentTab" />
+</template>
+
+<script>
+import wepy from 'wepy'
+import Tab from '../components/tab'
+import Meallist from '../components/meallist'
+
+export default class Home extends wepy.page {
+  components = {
+    tab: Tab,
+    meallist: Meallist
+  }
+  data = {
+    currentTab: 0
+  }
+}
+</script>
