@@ -1,6 +1,6 @@
 <style type="scss">
     $fontcolor: #7b7b7b;
-    $activecolor: #13b113;
+    $activecolor: #ff3c00;
     .tab {
         color: $fontcolor;
         position: fixed;
@@ -26,7 +26,6 @@
             margin: auto;
         }
         .title {
-            padding-top: 6rpx;
             display: block;
         }
     }

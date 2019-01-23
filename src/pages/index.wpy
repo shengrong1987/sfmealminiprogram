@@ -6,7 +6,9 @@
 <template>
     <logo />
     <view style="padding-top: 200rpx;"></view>
-    <zipcode />
+    <view style="text-align: center; font-size: 14px;"> <text>输入邮编查看菜单：</text></view>
+    <input type="number" style="margin: 48rpx; border-bottom: 1px solid gray; font-size: 18px; text-align: center; " placeholder=" " />
+    <button class="weui-btn" type="primary" style="margin: 48rpx;" bindtap='ontap'>确认</button>
     <view style="padding-top: 50rpx;"></view>
     <foot />
 </template>
@@ -14,14 +16,19 @@
 <script>
 import wepy from 'wepy'
 import Logo from '../components/logo'
-import Zipcode from '../components/zipcode'
 import Foot from '../components/foot'
 
 export default class Index extends wepy.page {
   components = {
     logo: Logo,
-    zipcode: Zipcode,
     foot: Foot
+  }
+  methods = {
+    ontap: function () {
+      wepy.navigateTo({
+        url: 'home'
+      })
+    }
   }
 }
 </script>
