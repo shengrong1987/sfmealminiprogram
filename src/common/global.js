@@ -14,8 +14,74 @@ import m_orders from '../model/order'
 
 import wepy from 'wepy'
 import moment from 'moment'
+import api from './api'
 
 export default {
+    humanizeDate : function(date){
+      var date = moment(date).hours(0)
+      var dateDesc = "unknown"
+      if(date.isSame(moment(),'day')){
+        dateDesc = 'today'
+      }else if(date.isSame(moment().add(1,'days'),'day')){
+        dateDesc = 'tomorrow'
+      }else if(moment.duration(date.diff(moment())).asDays() <= 7){
+        dateDesc = date.format('dddd')
+      }else{
+        dateDesc = date.format('[day]M/D')
+      }
+      return dateDesc
+    },
+    async combinePickupOptions (zipcode) {
+      let pickupOptions = await api.getPickupOptions(zipcode)
+      var combinedPickupOptions = []
+      pickupOptions.forEach((option) => {
+        var optionExist;
+        combinedPickupOptions.forEach((optionset, index) => {
+          if(option.publicLocation === optionset.title){
+           optionset.options.push(option)
+           optionExist = true
+          }
+        })
+        if(!optionExist){
+          combinedPickupOptions.push({ title : option.publicLocation, options : [option]})
+        }
+      })
+      return combinedPickupOptions
+    },
+    async getMealByPickupNickname (nickname) {
+      let meals = await api.getMeals()
+      meals = meals.filter((meal) => {
+        return meal.pickups.some((pickup) => {
+          return pickup.nickname === nickname;
+        })
+      })
+      return meals
+    },
+    getDataFromMeals (meals) {
+      var _this = this
+      var dishes = [],tags = [], dates = []
+      meals.forEach((meal) => {
+        meal.dishes.forEach((dish) => {
+          if(!dishes.some((d) => {
+            return d._id === dish._id
+          })){
+            dishes.push(dish)
+          }
+          if(dish.tags){
+            dish.tags.forEach((tag) => {
+              if(!tags.includes(tag)){
+                tags.push(tag)
+              }
+            })
+          }
+          var dateDesc = _this.humanizeDate(meal.pickups[0].pickupFromTime)
+          if(!dates.includes(dateDesc)){
+            dates.push(dateDesc)
+          }
+        })
+      })
+      return { dishes : dishes, tags : tags, dates : dates}
+    },
     getMeal (id) {
       if(this._meal){
         return id ? this._meal[id] : this._meal

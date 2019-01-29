@@ -24,7 +24,7 @@
       </Block>
       <Block style="display: flex; flex-direction: column; margin-left: 40rpx; margin-top: 16rpx;">
          <image class="circle" src="../images/chef.jpg" style="border: 2rpx solid #ffffff; height: 102rpx; width: 102rpx" />
-         <Text style="font-size: 10px; color: #888888; text-align: center;">John's</Text>
+         <Text style="font-size: 10px; color: #888888; text-align: center;">Johns</Text>
       </Block>
       <Block style="display: flex; flex-direction: column; margin-left: 40rpx; margin-top: 16rpx;">
         <image class="circle" src="../images/chef.jpg" style="border: 2rpx solid #ffffff; height: 102rpx; width: 102rpx" />
@@ -65,7 +65,7 @@
         </Block>
         </View>
     <View style="height: 1400rpx; overflow-y: scroll; background: #ffffff;">
-        <dishlist />
+        <dishlist :dishes.async="dishes"></dishlist>
     <View style="height: 600rpx; background: #ffffff;"></View>
     </View>
     </View>
@@ -75,10 +75,26 @@
 <script>
 import wepy from 'wepy'
 import Dishlist from '../components/dishlist'
+import Global from '../common/global'
 
 export default class Menu extends wepy.page {
   components = {
     dishlist: Dishlist
+  }
+  data = {
+    dishes: [],
+    tags: [],
+    dates: []
+  }
+  async onLoad (options) {
+    console.log('on Load...' + options.title)
+    let meals = await Global.getMealByPickupNickname(options.title)
+    console.log('get meal: ' + meals)
+    let mealData = Global.getDataFromMeals(meals)
+    console.log('get meal data: ' + mealData)
+    this.tags = mealData.tags
+    this.dishes = mealData.dishes
+    this.dates = mealData.dates
   }
 }
 </script>

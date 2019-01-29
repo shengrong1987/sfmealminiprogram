@@ -4,7 +4,7 @@
 </style>
 
 <template>
-  <meallist />
+  <meallist :zips.sync="zipcode"></meallist>
   <tab :active.sync="currentTab" />
 </template>
 
@@ -14,12 +14,19 @@ import Tab from '../components/tab'
 import Meallist from '../components/meallist'
 
 export default class Home extends wepy.page {
+  onLoad(opt) {
+    this.zipcode = opt.zipcode
+  }
   components = {
     tab: Tab,
     meallist: Meallist
   }
   data = {
-    currentTab: 0
+    currentTab: 0,
+    zipcode: {
+      type: String,
+      default: 'null'
+    }
   }
 }
 </script>

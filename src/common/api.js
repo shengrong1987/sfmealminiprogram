@@ -8,6 +8,7 @@
 import m_meals from '../model/meal'
 import m_users from '../model/user'
 import m_orders from '../model/order'
+import m_pickupOptions from '../model/pickupOption'
 
 import wepy from 'wepy'
 
@@ -32,6 +33,14 @@ export default {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(m_orders)
+            })
+        })
+    },
+
+    getPickupOptions (zipcode) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(m_pickupOptions)
             })
         })
     }

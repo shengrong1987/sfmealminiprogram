@@ -1,0 +1,95 @@
+/*
+  菜单页 : View 和 ViewModel的类
+  View : <template></template>里的内容是HTML视图，数据可以实现和ViewModel的双向绑定
+  ViewModel : <script></script>里负责数据逻辑和相应用户行为等等，连接了Model和View
+  @config
+  @components : 声明View中出现的组件
+  @props : 定于父组件传入的数据（只支持String)
+  @data : 定于需要和View绑定的数据
+  @computed : 定于需要动态计算的数据（每次渲染都会调用方法)
+  @methods : 定于View中所捕获到的事件(如: tap, change)
+  @events : 定义组件事件处理函数($broadcast、$emit、$invoke)
+  @onShow, onLoad : 生命周期函数
+  
+  其他: 自定义方法与属性
+  @format : 格式化数据
+  @loadMeal : 读取Meal数据
+*/
+<style>
+</style>
+<template>
+  <view class='h100'>
+    <datePicker />
+    <view class='flex h90'>
+      <tagPicker />
+      <dishPicker class='dishPicker col-12 overflow-scroll h100'/>
+    </view>
+    <view class='fixed col-12'>
+      <checkoutBar />
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Panel from '@/components/panel' // alias example
+  import Toast from 'wepy-com-toast'
+  import api from '../common/api'
+  import global from '../common/global'
+  import DatePicker from '../components/datePicker'
+  import TagPicker from '../components/tagPicker'
+  import DishPicker from '../components/dishPicker'
+  import CheckoutBar from '../components/checkoutBar'
+
+  export default class Menu extends wepy.component {
+    components = {
+      panel: Panel,
+      toast: Toast,
+      datePicker: DatePicker,
+      tagPicker: TagPicker,
+      dishPicker: DishPicker,
+      checkoutBar: CheckoutBar
+    }
+
+    props = {
+      title: String
+    }
+
+    data = {
+    }
+
+    computed = {
+      now () {
+        return +new Date()
+      }
+    }
+
+    methods = {
+      toast () {
+        let promise = this.$invoke('toast', 'show', {
+          title: '自定义标题',
+          img: 'https://raw.githubusercontent.com/kiinlam/wetoast/master/images/star.png'
+        })
+
+        promise.then((d) => {
+          console.log('toast done')
+        })
+      }
+    }
+
+    events = {
+      'index-emit': (...args) => {
+        let $event = args[args.length - 1]
+        console.log(`${this.$name} receive ${$event.name} from ${$event.source.$name}`)
+      }
+    }
+
+    onShow() {
+      console.log('onShow...' + this.title)
+    }
+
+    onLoad(options) {
+      console.log('onLoad...' + options.title)
+    }
+  }
+</script>
