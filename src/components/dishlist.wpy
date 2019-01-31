@@ -4,12 +4,9 @@
 </style>
 
 <template>
-<dishcard />
-  <dishcard />
-  <dishcard />
-  <navigator url="menu" hover-class="navigator-hover">
-        <dishcard />
-      </navigator>
+<repeat for="dishes" item="dish">
+  <dishcard :dish="dish"/>
+</repeat>
 </template>
 
 <script>
@@ -19,13 +16,16 @@ import Dishcard from './dishcard'
 export default class Dishlist extends wepy.component {
   components = {
     dishcard: Dishcard
-  };
+  }
   methods = {
     ontap: function () {
       wepy.navigateTo({
         url: 'index'
       })
     }
-  };
+  }
+  data = {
+    dishes: []
+  }
 }
 </script>

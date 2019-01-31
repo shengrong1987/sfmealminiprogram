@@ -7,8 +7,8 @@
     <logo />
     <view style="padding-top: 200rpx;"></view>
     <view style="text-align: center; font-size: 14px;"> <text>输入邮编查看菜单：</text></view>
-    <input type="number" style="margin: 48rpx; border-bottom: 1px solid gray; font-size: 18px; text-align: center; " placeholder=" " />
-    <button class="weui-btn" type="primary" style="margin: 48rpx;" bindtap='ontap'>确认</button>
+    <input type="number" @confirm='ontap' @input='onchange' maxlength="10" style="margin: 48rpx; border-bottom: 1px solid gray; font-size: 18px; text-align: center; " />
+    <button class="weui-btn" type="primary" style="margin: 48rpx;" @tap='ontap'>确认</button>
     <view style="padding-top: 50rpx;"></view>
     <foot />
 </template>
@@ -23,11 +23,25 @@ export default class Index extends wepy.page {
     logo: Logo,
     foot: Foot
   }
+  data = {
+    zipcode: ''
+  }
   methods = {
-    ontap: function () {
-      wepy.navigateTo({
-        url: 'home'
-      })
+    onchange: function (e) {
+      this.zipcode = e.detail.value
+    },
+    ontap: function (e) {
+      console.log(this.zipcode)
+      var zipcode = this.zipcode
+      if (!zipcode) {
+        wx.showToast({
+          title: '请输入邮编',
+          icon: 'none',
+          duration: 2000
+        })
+        return
+      }
+      wepy.navigateTo({ url: 'home?zipcode=' + zipcode })
     }
   }
 }

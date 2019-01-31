@@ -4,31 +4,43 @@
 </style>
 
 <template>
-  <view style="text-align: left; font-size: 16px; padding-left:48rpx;"> <text>您的邮编是：94014</text> 
+  <view style="text-align: left; font-size: 16px; padding-left:48rpx;"> <text>您的邮编是：{{ zips }}</text> 
   <button class="mini-btn" plain="true" type="primary" size="mini" style="vertical-align:middle; margin-left:24rpx;" bindtap='ontap'>编辑</button></view>
   <view style="font-size: 13px; color: #888888; padding-left:48rpx; margin-top:32rpx;">以下是符合此邮编的菜单，请选一个查看：</view>
-  <mealcard />
-  <mealcard />
-  <mealcard />
-  <navigator url="menu" hover-class="navigator-hover">
-        <mealcard />
-      </navigator>
+  <repeat for="{{ pickupoptions }}" key="index" index="index" item="option">
+    <navigator url="menu?title={{option.options[0].nickname}}" hover-class="navigator-hover">
+      <mealcard :option="option"></mealcard>
+    </navigator>
+  </repeat>
 </template>
 
 <script>
 import wepy from 'wepy'
 import Mealcard from './mealcard'
+import Global from '../common/global'
 
 export default class Mealist extends wepy.component {
+  props = {
+    zips: String
+  }
+  data = {
+    pickupoptions: []
+  }
   components = {
     mealcard: Mealcard
-  };
+  }
   methods = {
     ontap: function () {
       wepy.navigateTo({
         url: 'index'
       })
     }
-  };
+  }
+  async onLoad () {
+    let pickupoptions = await Global.combinePickupOptions(this.zips)
+    this.pickupoptions = pickupoptions
+    this.$apply()
+    console.log(pickupoptions)
+  }
 }
 </script>
