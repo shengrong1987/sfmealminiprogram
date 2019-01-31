@@ -32,7 +32,7 @@
         <dishlist :dishes.async="dishes"></dishlist>
     <View style="height: 600rpx; background: #ffffff;"></View>
     </View>
-    </View>
+  </View>
 </View>
 </template>
 
