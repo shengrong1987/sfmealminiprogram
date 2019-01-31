@@ -59,8 +59,13 @@ export default {
     },
     getDataFromMeals (meals) {
       var _this = this
-      var dishes = [],tags = [], dates = []
+      var dishes = [],tags = [], dates = [], hosts = []
       meals.forEach((meal) => {
+        if(!hosts.some((host) => {
+          return host.id === meal.chef.id
+        })){
+          hosts.push(meal.chef)
+        }
         meal.dishes.forEach((dish) => {
           if(!dishes.some((d) => {
             return d._id === dish._id
@@ -80,7 +85,7 @@ export default {
           }
         })
       })
-      return { dishes : dishes, tags : tags, dates : dates}
+      return { dishes: dishes, tags: tags, dates: dates, hosts: hosts}
     },
     getMeal (id) {
       if(this._meal){

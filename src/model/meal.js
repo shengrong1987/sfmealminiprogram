@@ -76,7 +76,62 @@ let meals = [
   "priceRate": 0,
   "qtyRate": 0,
   "minimalPrice": 0,
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "sold": 0,
   "numberOfReviews": 1,
   "score": 5,
@@ -120,7 +175,62 @@ let meals = [
   "priceRate": 0,
   "qtyRate": 0,
   "minimalPrice": 0,
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "sold": 0,
   "numberOfReviews": 1,
   "score": 5,
@@ -166,7 +276,62 @@ let meals = [
   "tags": [
     "frozen"
   ],
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "sold": 0,
   "numberOfReviews": 1,
   "score": 5,
@@ -207,7 +372,62 @@ let meals = [
   "qtyRate": 0,
   "minimalPrice": 0,
   "tag": "limited",
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "sold": 0,
   "numberOfReviews": 0,
   "score": 5,
@@ -248,7 +468,62 @@ let meals = [
   "qtyRate": 0,
   "minimalPrice": 0,
   "tag": "limited",
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "sold": 0,
   "numberOfReviews": 0,
   "score": 5,
@@ -482,7 +757,62 @@ let meals = [
   "isShipping": false,
   "supportPartyOrder": false,
   "isSupportDynamicPrice": false,
-  "chef": "5bbc2a9c2a67d42575d9f78a",
+  "chef": {
+    "_id": "5bbc2a9c2a67d42575d9f78a",
+  "user": "5bb2a4a5f1ff7e601e5640a3",
+  "email": "1104146557@qq.com",
+  "shopName": "徐记私房",
+  "intro": "徐嬢嬢Vivian Xu来自上海，地道的长江流域江南人氏。后移民美国，是加州湾区叙味坊的创始人之一。\n  Vivian 就在采访中笑称自己的母亲那时候是真的是极力反对一个女儿家的自己泡在厨房里过日子，母亲嫌弃久呆厨房的过重油烟味儿和不上台面。毕竟所谓说上得厅堂，下得厨房呀！自己的家庭也够富足，做什么不好呢？然而自己的一席话却打动了母亲，说道“不食遍五谷杂粮，不尝遍酸甜苦辣; 何知人间事事百态，何论世道物是人非呢？” 小编认为生活不就是菜米油盐酱醋茶吗？父母让我们受到良好的教育也是为了更好的升华我们平淡的生活！眼前的应该不止生活的苟且，却应还有向往的诗与远方呀。相信这一席话感动的不止Vivian 的母亲，我们也会受到启发---把这种粗茶淡饭的生活行为变得更加艺术，投身到自己的喜好当中，积极阳光向上的态度---这种特别赋有的激情才能滚烫某种信仰，比如对食物传承的信仰，好把它延续下去。",
+  "passGuide": true,
+  "likes": 5,
+  "commission": 0.2000000000000000111,
+  "createdAt": new Date(1539058332054),
+  "updatedAt": new Date(1548878839517),
+  "accountId": "acct_1DJCZsKwL3XhzF9T",
+  "verification": null,
+  "dishVerifying": true,
+  "county": "San Mateo County",
+  "state": "CA",
+  "city": "Daly City",
+  "full_address": "25 Washington St, Daly City, CA 94014, USA",
+  "lat": "37.6878144",
+  "long": "-122.4693472",
+  "street": "25 Washington Street",
+  "zip": "94014",
+  "locale": "zh",
+  "phone": "(510)770-4597",
+  "pocket": "5bbd2e02a73af18c3bcd600c",
+  "shopName_en": "",
+  "intro_en": "",
+  "feature_dishes": [
+    {
+      "dish1": {
+        "id": "5bbc34b9345fa9190e4c509a",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish2": {
+        "id": "5bbc36de345fa9190e4c509b",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    },
+    {
+      "dish3": {
+        "id": "5bbc3f42345fa9190e4c509d",
+        "title": "\n                        \n                          \n                          \n                        \n                          \n                        \n                        \n                      \n                          \n                        \n                        \n                      "
+      }
+    }
+  ],
+  "picture": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/story.jpeg",
+  "license": {
+    "url": "https://sfmeal.s3.amazonaws.com/users/5bb2a4a5f1ff7e601e5640a3/license.jpg",
+    "valid": true,
+    "issuedTo": "meng wei xu",
+    "exp": "2021-04-09T07:00:00.000Z"
+  },
+  "bankId": "ba_1DOcz9KwL3XhzF9TqtT2sCUV"
+  },
   "county": "San Francisco County+San Mateo County",
   "commission": 0.2000000000000000111,
   "isScheduled": true,
