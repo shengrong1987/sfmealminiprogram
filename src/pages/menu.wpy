@@ -40,31 +40,31 @@
       </Block>
     </View>
 </View>  
-    <View style="display: flex; flex-direction: row; position: fixed; background: #dddddd;">
-        <View style="display: flex; flex-direction: column; ">
-        <Block style="line-height: 2.6; background: #ffffff; width: 156rpx; border: 2rpx solid #1aad19; border-left: 16rpx solid #1aad19; text-align: center;">
+    <View style="display: flex; flex-direction: row; position: fixed; background: #dddddd; width: 100%">
+        <View style="display: flex; flex-direction: column;">
+        <Block style="height: 40px; padding-top: 10px; background: #ffffff; width: 78px; border: 2rpx solid #1aad19; border-left: 8px solid #1aad19; text-align: center;">
         <Text style="font-size: 14px;">私厨</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">特价</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">冷盘</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">主菜</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">主食</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">点心</Text>
         </Block>
-        <Block style="line-height: 2.6; width: 168rpx; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
+        <Block style="height: 40px; padding-top: 10px; width: 84px; background: #efefef; border: 2rpx solid #cccccc; text-align: center;">
         <Text style="font-size: 14px;">甜点</Text>
         </Block>
         </View>
-    <View style="height: 1400rpx; overflow-y: scroll; background: #ffffff;">
+    <View style="height: 1400rpx; overflow-y: scroll; background: #ffffff; width: 100%;">
         <dishlist />
     <View style="height: 600rpx; background: #ffffff;"></View>
     </View>
